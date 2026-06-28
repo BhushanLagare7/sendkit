@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * @fileoverview SendKit CLI - A command-line interface for sending messages
  * through various platforms, currently supporting Telegram.
@@ -88,7 +89,9 @@ function getTelegramBotToken(): string {
   }
 
   // Parse and validate the raw JSON against the expected config schema
-  const config = cliConfigSchema.parse(JSON.parse(readFileSync(configPath, "utf8")));
+  const config = cliConfigSchema.parse(
+    JSON.parse(readFileSync(configPath, "utf8")),
+  );
 
   const token = config.telegramBotToken;
 

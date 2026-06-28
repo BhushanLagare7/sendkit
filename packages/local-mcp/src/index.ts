@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * @file SendKit Local MCP Server
  *
@@ -18,7 +19,10 @@
 
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { sendTelegramMessage, telegramMessageInputSchema } from "@blagare/sendkit-core";
+import {
+  sendTelegramMessage,
+  telegramMessageInputSchema,
+} from "@blagare/sendkit-core";
 
 /**
  * The MCP server instance that exposes tools to the connected MCP client.
