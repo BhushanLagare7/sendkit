@@ -137,10 +137,7 @@ const app = new Hono();
  * @returns {string} The absolute URL of the protected resource metadata endpoint.
  */
 function protectedResourceMetadataUrl(c: Context, botToken: string): string {
-  return new URL(
-    `/.well-known/oauth-protected-resource/${botToken}/mcp`,
-    c.req.url,
-  ).toString();
+  return new URL(`/.well-known/oauth-protected-resource/${botToken}/mcp`, c.req.url).toString();
 }
 
 /**
@@ -190,10 +187,7 @@ app.get("/.well-known/oauth-protected-resource/:botToken/mcp", (c) => {
   return c.json(
     generateClerkProtectedResourceMetadata({
       publishableKey: clerkPublishableKey,
-      resourceUrl: new URL(
-        `/${c.req.param("botToken")}/mcp`,
-        c.req.url,
-      ).toString(),
+      resourceUrl: new URL(`/${c.req.param("botToken")}/mcp`, c.req.url).toString(),
     }),
   );
 });
