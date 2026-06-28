@@ -16,7 +16,7 @@ import { Command } from "commander";
 import { z } from "zod";
 import { homedir } from "node:os";
 import { dirname, join } from "node:path";
-import { sendTelegramMessage } from "sendkit-core";
+import { sendTelegramMessage } from "@blagare/sendkit-core";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
 /** Root commander program instance */

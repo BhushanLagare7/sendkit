@@ -1,11 +1,14 @@
 {
-  "name": "sendkit",
+  "name": "@blagare/sendkit",
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "scripts": {
+    "build": "tsdown"
+  },
   "dependencies": {
+    "@blagare/sendkit-core": "workspace:*",
     "commander": "^15.0.0",
-    "sendkit-core": "workspace:*",
     "zod": "^4.4.3"
   }
 }
